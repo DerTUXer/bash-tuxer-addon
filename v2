@@ -1,4 +1,5 @@
-# TUXer`s Begrüßung
+# TUXer`s Begrüßung V2
+clear
 echo Die nette BASH, vom TUXer optimiert.
 echo
 
@@ -13,10 +14,18 @@ echo
 
 # TUXer`s Hotkeys
 echo rechner = Syteminformationen
-alias rechner='clear && lsb_release -i -c -d && echo -n "Kernel:         " && uname -r && echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,14}" && echo -n "Pfad zur Shell:  " && echo $SHELL'
+alias rechner='clear && lsb_release -i -c -d && echo -n "Kernel:         " && uname -r && echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,14}" && echo -n "Pfad zur Shell:  " && echo $SHELL && cat /proc/meminfo |grep MemTotal && echo && free -h'
 
 echo up = komplettes Update !
 alias up='clear && echo Geben Sie Ihr Passwort ein, um Update und Upgrade durchführen zu können && sudo apt update && echo && echo -e "\e[1m\e[33mPaket-Update ist FERTIG, nun kommt das Upgrade\e[0m" && echo && sudo apt upgrade && echo'
 
 echo up2 = flatpak update
 alias up2='clear && echo Geben Sie Ihr Passwort ein, um Flatpak Update durchführen zu können && sudo flatpak update && echo && echo -e "\e[1m\e[33mFlatpak-Update ist FERTIG\e[0m" && echo' 
+
+echo Suchen locate -i [DATEINAME.*]
+echo DB = sudo updatedb
+alias DB='sudo updatedb'
+
+echo "  Bildbetrachter: qiv"
+echo "  Dateibrowerser: ranger, lfm, mc"
+echo
