@@ -28,4 +28,4 @@ alias DB='sudo updatedb'
 
 echo "  Bildbetrachter: qiv"
 echo "  Dateibrowerser: ranger, lfm, mc"
-echo
+echo "  Hardware list: inxi -Fz"
