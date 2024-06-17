@@ -1,10 +1,10 @@
-# TUXer`s Begrüßung V2
+# TUXer`s Begrüßung
 clear
 echo Die nette BASH, vom TUXer optimiert.
 echo
 
 # TUXer`s Datum (klein)
- echo -n "Datum:    " && date +%F && echo -n && echo -n "KW        " && date +%U
+echo -n "Datum:    " && date +%F && echo -n && echo -n "KW        " && date +%U
 
 
 time="$(date +%R)" && echo "############### UHRZEIT ################" && echo
@@ -22,10 +22,15 @@ alias up='clear && echo Geben Sie Ihr Passwort ein, um Update und Upgrade durchf
 echo up2 = flatpak update
 alias up2='clear && echo Geben Sie Ihr Passwort ein, um Flatpak Update durchführen zu können && sudo flatpak update && echo && echo -e "\e[1m\e[33mFlatpak-Update ist FERTIG\e[0m" && echo' 
 
+echo up3 = snap update
+alias up3='clear && echo Geben Sie Ihr Passwort ein, um Snap Update durchführen zu können && sudo snap refresh && echo && echo -e "\e[1m\e[33mSnap-Update ist FERTIG\e[0m" && echo' 
+
 echo Suchen locate -i [DATEINAME.*]
 echo DB = sudo updatedb
 alias DB='sudo updatedb'
 
 echo "  Bildbetrachter: qiv"
-echo "  Dateibrowser: ranger, lfm, mc"
-echo "  Hardware list: inxi -Fz"
+echo "  Dateibrowerser: ranger, lfm, mc"
+echo
+
+alias c64='clear && echo && echo -e "\033[1;34m  ++++ Commodore 64 Basic V2 ++++\e[0m"  && echo && echo -e " \e[1m\e[34m64K RAM SYSTEM 38911 BASIC BYTES FREE\e[0m " && echo && echo -e " \e[1m\e[34mready.\e[0m "'
