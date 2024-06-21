@@ -1,4 +1,6 @@
 # TUXer`s Begrüßung
+# Version 4
+#
 clear
 echo Die nette BASH, vom TUXer optimiert.
 echo
@@ -34,3 +36,6 @@ echo "  Dateibrowerser: ranger, lfm, mc"
 echo
 
 alias c64='clear && echo && echo -e "\033[1;34m  ++++ Commodore 64 Basic V2 ++++\e[0m"  && echo && echo -e " \e[1m\e[34m64K RAM SYSTEM 38911 BASIC BYTES FREE\e[0m " && echo && echo -e " \e[1m\e[34mready.\e[0m "'
+
+echo " neu = neue Textdatei erstellen"
+alias neu='touch neue_Textdatei.txt'
