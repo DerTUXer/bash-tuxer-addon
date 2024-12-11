@@ -4,7 +4,7 @@ Dieser kleine  code ist dafür gedacht um am Ende in der Datei ".bashrc"
 angehangen zu werden.
 
 Die zusätzlichen Befehle werden beim Start des Terminals ausgegeben.
-Es soll der Biginn einer Erweiterung für die Bash werden
+Es soll der Beginn einer Erweiterung für die Bash werden
 
 Jeder kann, soll, muss hier den Code erweitern!
 
