@@ -1,4 +1,4 @@
-------------------------------------------------------------------------------------
+#------------------------------------------------------------------------------------
 #
 # bash-tuxer-addon
 # Version 8 Juli 2025
@@ -30,7 +30,7 @@ echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashup........... \e[0m
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  qiv.............. \e[0m "	&& echo "Bildbetrachter"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  ranger lfm mc.... \e[0m "	&& echo "Dateibrowerser"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashinfo......... \e[0m "	&& echo "Bash Befehle"
-echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  ......... \e[0m "	&& echo "....."
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  soft2............ \e[0m "	&& echo "Zusätzliche Software"
 echo -e "\033[1;34m  --------------------------------------------------\e[0m "
 echo
 
@@ -66,8 +66,10 @@ alias neu='touch neue_Textdatei.txt'
 
 alias bashup='clear && echo Folgende Helferlein werden nun installiert && 
 	echo -e "\033[1;34m...banner" && 
-	echo ...qiv && echo ...ranger && 
-	echo ...inxi && echo ...lfm && 
+	echo ...qiv && 
+	echo ...ranger && 
+	echo ...inxi && 
+	echo ...lfm && 
 	echo ...mc && 
 	echo ...locate && 
 	echo ...flatpak && 
@@ -107,3 +109,30 @@ alias bashinfo='clear &&
 	echo "...................... " &&
 	echo "...................... " &&
 echo '
+
+alias soft2='clear &&
+	echo "es werden folgende Softwarepakete zusätzlich installiert:"
+	echo -e "\033[1;34m...kdenlive" && 
+	echo ...qmapshack, gpsprune, viking  && 
+	echo ...remmina&& 
+	echo ...obs-studio && 
+	echo ...audacious, audacity && 
+	echo ...nextcloud-desktop && 
+	echo ...obs-studio && 
+	echo ...audacious && 
+	echo ...audacity && 
+	echo ...gimp, mtpaint && 
+	echo ...pdfarranger, xournal &&
+	echo ...jstest, steam, wine, winetricks &&
+	echo ...virtualbox && 
+	echo ...&& 
+	echo ...&& 
+	echo -e " \e[1m\e[34m \e[0m " && 
+	sudo apt -y install -y kdenlive qmapshack viking obs-studio audacious audacity &&
+	sudo apt -y install gpsprune &&
+	sudo apt -y install remmina nextcloud-desktop &&
+	sudo apt -y install gimp mtpaint pdfarranger xournal &&
+	sudo apt -y install jstest-gtk steam-installer wine winetricks &&
+	sudo apt -y install virtualbox virtualbox-guest-additions-iso &&
+	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
+	echo'
