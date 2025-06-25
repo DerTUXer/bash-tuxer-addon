@@ -128,11 +128,11 @@ alias soft2='clear &&
 	echo ...&& 
 	echo ...&& 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo apt -y install -y kdenlive qmapshack viking obs-studio audacious audacity &&
-	sudo apt -y install gpsprune &&
-	sudo apt -y install remmina nextcloud-desktop &&
-	sudo apt -y install gimp mtpaint pdfarranger xournal &&
-	sudo apt -y install jstest-gtk steam-installer wine winetricks &&
-	sudo apt -y install virtualbox virtualbox-guest-additions-iso &&
+	sudo apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
+	sudo apt install -y gpsprune &&
+	sudo apt install -y remmina nextcloud-desktop &&
+	sudo apt install -y gimp mtpaint pdfarranger xournal &&
+	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
+	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
