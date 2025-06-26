@@ -79,7 +79,7 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...ssh &&
 	echo ...libcanberra-gtk3-module && 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo apt-get install sysvbanner qiv ranger lfm mc locate flatpak htop default-jre neofetch inxi libcanberra-gtk3-module ssh'
+	sudo apt-get -y install sysvbanner qiv ranger lfm mc locate flatpak htop default-jre neofetch inxi libcanberra-gtk3-module ssh'
 
 alias sauber='echo "Die Reingung beginnt" &&
 	sudo apt autoremove && 
