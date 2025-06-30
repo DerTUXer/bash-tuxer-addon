@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------------
 #
 # bash-tuxer-addon
-# Version 9 Juli 2025
+# Version 9b Juli 2025
 #
 # ------------------------------------------------------------------------------------
 
@@ -39,6 +39,7 @@ echo
 alias rechner='clear &&
 	neofetch &&
 	lsb_release -c && 
+	echo -n "Kernel:         " && uname -r &&
 	echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,15}" && echo &&
 	echo -en "\033[1;38m_______________________________RAM & SWAP_______________________________________ \e[0m "
 	echo && free -h'								
