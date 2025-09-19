@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------------
 #
 # bash-tuxer-addon
-# Version 9b Juli 2025
+# Version 10 Sep 2025
 #
 # ------------------------------------------------------------------------------------
 
@@ -106,8 +106,8 @@ alias bashinfo='clear &&
 	echo "java -jar trackguru.jar......................Java Programm starten" &&		
 	echo "shutdown -h 20:30............................Um 20:30Uhr herunterfahren" &&
 	echo "sudo systemctl status ssh....................Status ssh-Verbindung checken " &&
-	echo "...................... " &&
-	echo "...................... " &&
+	echo "pavucontrol..................................Sound Probleme beheben " &&
+	echo "sudo swapon /dev/sda999......................Swap Partion einschalten " &&
 	echo "...................... " &&
 	echo "...................... " &&
 echo '
@@ -127,7 +127,7 @@ alias soft2='clear &&
 	echo ...pdfarranger, xournal &&
 	echo ...jstest, steam, wine, winetricks &&
 	echo ...virtualbox && 
-	echo ...&& 
+	echo ...pavucontrol && 
 	echo ...&& 
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
@@ -136,5 +136,6 @@ alias soft2='clear &&
 	sudo apt install -y gimp mtpaint pdfarranger xournal &&
 	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
 	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
+	sudo apt install -y pavucontrol &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
