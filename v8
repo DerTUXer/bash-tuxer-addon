@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------------
 #
 # bash-tuxer-addon
-# Version 8 Juli 2025
+# Version 10 Sep 2025
 #
 # ------------------------------------------------------------------------------------
 
@@ -39,7 +39,8 @@ echo
 alias rechner='clear &&
 	neofetch &&
 	lsb_release -c && 
-	echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,14}" && echo &&
+	echo -n "Kernel:         " && uname -r &&
+	echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,15}" && echo &&
 	echo -en "\033[1;38m_______________________________RAM & SWAP_______________________________________ \e[0m "
 	echo && free -h'								
 
@@ -76,9 +77,10 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...htop && 
 	echo ...java && 
 	echo ...neofetch &&
+	echo ...ssh &&
 	echo ...libcanberra-gtk3-module && 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo apt-get install sysvbanner qiv ranger lfm mc locate flatpak htop default-jre neofetch inxi libcanberra-gtk3-module'
+	sudo apt-get -y install sysvbanner qiv ranger lfm mc locate flatpak htop default-jre neofetch inxi libcanberra-gtk3-module ssh'
 
 alias sauber='echo "Die Reingung beginnt" &&
 	sudo apt autoremove && 
@@ -103,9 +105,9 @@ alias bashinfo='clear &&
 	echo "ssh tuxer@192.168.178.54.....................ssh Verbindung im terminal" &&
 	echo "java -jar trackguru.jar......................Java Programm starten" &&		
 	echo "shutdown -h 20:30............................Um 20:30Uhr herunterfahren" &&
-	echo "...................... " &&
-	echo "...................... " &&
-	echo "...................... " &&
+	echo "sudo systemctl status ssh....................Status ssh-Verbindung checken " &&
+	echo "pavucontrol..................................Sound Probleme beheben " &&
+	echo "sudo swapon /dev/sda999......................Swap Partion einschalten " &&
 	echo "...................... " &&
 	echo "...................... " &&
 echo '
@@ -125,7 +127,7 @@ alias soft2='clear &&
 	echo ...pdfarranger, xournal &&
 	echo ...jstest, steam, wine, winetricks &&
 	echo ...virtualbox && 
-	echo ...&& 
+	echo ...pavucontrol && 
 	echo ...&& 
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
@@ -134,5 +136,6 @@ alias soft2='clear &&
 	sudo apt install -y gimp mtpaint pdfarranger xournal &&
 	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
 	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
+	sudo apt install -y pavucontrol &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
