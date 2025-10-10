@@ -1,6 +1,5 @@
 #------------------------------------------------------------------------------------
-#
-# bash-tuxer-addon
+## bash-tuxer-addon
 # Version 11 Okt 2025
 # Für alle Ubuntu Versionen ab 25.10
 # ------------------------------------------------------------------------------------
@@ -37,7 +36,7 @@ echo
 # TUXer`s Hotkeys / Alias
 
 alias rechner='clear &&
-	neoeofetch &&
+	neowofetch &&
 	lsb_release -c && 
 	echo -n "Kernel:         " && uname -r &&
 	echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,15}" && echo &&
