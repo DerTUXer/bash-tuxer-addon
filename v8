@@ -1,8 +1,8 @@
 #------------------------------------------------------------------------------------
 #
 # bash-tuxer-addon
-# Version 10 Sep 2025
-#
+# Version 11 Okt 2025
+# Für alle Ubuntu Versionen ab 25.10
 # ------------------------------------------------------------------------------------
 
 clear
@@ -37,7 +37,7 @@ echo
 # TUXer`s Hotkeys / Alias
 
 alias rechner='clear &&
-	neofetch &&
+	neoeofetch &&
 	lsb_release -c && 
 	echo -n "Kernel:         " && uname -r &&
 	echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,15}" && echo &&
@@ -76,16 +76,16 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...flatpak && 
 	echo ...htop && 
 	echo ...java && 
-	echo ...neofetch &&
+	echo ...neowofetch &&
 	echo ...ssh &&
 	echo ...libcanberra-gtk3-module && 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo apt-get -y install sysvbanner qiv ranger lfm mc locate flatpak htop default-jre neofetch inxi libcanberra-gtk3-module ssh'
+	sudo-rs apt install -y sysvbanner qiv ranger lfm mc locate flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh'
 
 alias sauber='echo "Die Reingung beginnt" &&
-	sudo apt autoremove && 
-	sudo apt autoclean && 
-	sudo apt install --fix-broken'
+	sudo-rs apt autoremove && 
+	sudo-rs apt autoclean && 
+	sudo-rs apt install --fix-broken'
 	
 
 alias bashinfo='clear &&
@@ -105,9 +105,9 @@ alias bashinfo='clear &&
 	echo "ssh tuxer@192.168.178.54.....................ssh Verbindung im terminal" &&
 	echo "java -jar trackguru.jar......................Java Programm starten" &&		
 	echo "shutdown -h 20:30............................Um 20:30Uhr herunterfahren" &&
-	echo "sudo systemctl status ssh....................Status ssh-Verbindung checken " &&
+	echo "sudo-rs systemctl status ssh....................Status ssh-Verbindung checken " &&
 	echo "pavucontrol..................................Sound Probleme beheben " &&
-	echo "sudo swapon /dev/sda999......................Swap Partion einschalten " &&
+	echo "sudo-rs swapon /dev/sda999......................Swap Partion einschalten " &&
 	echo "...................... " &&
 	echo "...................... " &&
 echo '
@@ -130,12 +130,12 @@ alias soft2='clear &&
 	echo ...pavucontrol && 
 	echo ...&& 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
-	sudo apt install -y gpsprune &&
-	sudo apt install -y remmina nextcloud-desktop &&
-	sudo apt install -y gimp mtpaint pdfarranger xournal &&
-	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
-	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
-	sudo apt install -y pavucontrol &&
+	sudo-rs apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
+	sudo-rs apt install -y gpsprune &&
+	sudo-rs apt install -y remmina nextcloud-desktop &&
+	sudo-rs apt install -y gimp mtpaint pdfarranger xournal &&
+	sudo-rs apt install -y jstest-gtk steam-installer wine winetricks &&
+	sudo-rs apt install -y virtualbox virtualbox-guest-additions-iso &&
+	sudo-rs apt install -y pavucontrol &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
