@@ -1,0 +1,160 @@
+#------------------------------------------------------------------------------------
+## bash-tuxer-addon
+# Version 15 Oktober 2025
+#
+# Farbe		ANSI-Code	Farbe		ANSI-Code
+# Schwarz	\033[0;30m	Dunkelgrau	\033[1;30m
+# Rot		\033[0;31m	Hellrot		\033[1;31m
+# Grün		\033[0;32m	Hellgrün	\033[1;32m
+# Braun		\033[0;33m	Gelb		\033[1;33m
+# Blau		\033[0;34m	Hellblau	\033[1;34m
+# Lila		\033[0;35m	Helllila	\033[1;35m
+# Cyan		\033[0;36m	Hellcyan	\033[1;36m
+# Hellgrau	\033[0;37m	Weiß		\033[1;37m
+# ------------------------------------------------------------------------------------
+
+clear
+echo -e "\033[1;34m    bash-tuxer-addon v13 \e[0m "
+echo " -------------------------"
+echo -n "Homepage:  " && echo -e "\033[1;35m https://mtb-tour-map.jimdosite.com/ \e[0m "
+echo -n "You Tube:  " && echo -e "\033[1;35m https://www.youtube.com/@dertuxer4034 \e[0m "
+echo Die nette BASH, vom Der TUXer optimiert.
+echo
+
+# TUXer`s Datum (klein)
+# echo -n "Datum:    " && date +%F
+echo -n "KW        " && date +%U
+echo -n "Uhrzeit:  " && date +%R
+echo
+ncal
+
+# TUXer`s Hotkeys
+echo -e "\033[1;34m  ----------------------ALIAS------------------------\e[0m "
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  rechner .......... \e[0m "	&& echo "Syteminformationen"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  up ............... \e[0m "	&& echo "komplettes Update !"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  c64 .............. \e[0m "	&& echo "Basic V2.0"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  sauber ........... \e[0m "	&& echo "Paket aufräumen"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  neu .............. \e[0m "	&& echo "leere Datei anlegen"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashup ........... \e[0m "	&& echo "Bash einmalig erweitern"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  qiv .............. \e[0m "	&& echo "Bildbetrachter"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  ranger lfm mc .... \e[0m "	&& echo "Dateibrowerser"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashinfo ......... \e[0m "	&& echo "Bash Befehle"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  soft2 ............ \e[0m "	&& echo "Zusätzliche Software"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  paket ............ \e[0m "	&& echo "Installierte Pakete anzeigen"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  source ........... \e[0m "	&& echo "Source-Liste anzeigen"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  part ............. \e[0m "	&& echo "Partionen anzeigen"
+echo -e "\033[1;34m  ---------------------------------------------------\e[0m "
+echo
+
+# TUXer`s Alias
+
+alias rechner='clear &&
+	neowofetch &&
+	lsb_release -c && 
+	echo -n "Kernel:         " && uname -r &&
+	echo -n "Lokale IP:      " && hostname -I | egrep -o "^.{0,15}" && echo &&
+	echo -en "\033[1;38m_______________________________RAM & SWAP_______________________________________ \e[0m "
+	echo && free -h'								
+
+alias c64='clear && echo && 
+	echo -e "\033[1;34m  ++++ Commodore 64 Basic V2 ++++\e[0m"  && echo && 
+	echo -e " \e[1m\e[34m64K RAM SYSTEM 38911 BASIC BYTES FREE\e[0m " && 
+	echo && echo -e " \e[1m\e[34mready.\e[0m "'
+
+alias up='clear && 
+	echo -n "Geben Sie Ihr Passwort ein, um " && 
+	echo -en "\033[1;34mUpdate und Upgrade\e[0m "&& 
+	echo "durchführen zu können." &&
+	 
+	sudo apt update && sudo apt upgrade &&
+	echo -e "\e[1m\e[33mAPT Aktualisierung ist FERTIG\e[0m" &&  echo && 
+	
+	sudo flatpak update && 
+	echo -e "\e[1m\e[33mFlatpak Aktualisierung ist FERTIG\e[0m" && echo && 
+	
+	sudo snap refresh && 
+	echo -e "\e[1m\e[33mSNAP Aktualisierung ist FERTIG\e[0m"'
+
+alias neu='touch neue_Textdatei.txt'
+
+alias bashup='clear && echo Folgende Helferlein werden nun installiert && 
+	echo -e "\033[1;34m...banner" && 
+	echo ...qiv && 
+	echo ...ranger && 
+	echo ...inxi && 
+	echo ...lfm && 
+	echo ...mc && 
+	echo ...locate && 
+	echo ...flatpak und flathub && 
+	echo ...htop && 
+	echo ...java && 
+	echo ...neowofetch &&
+	echo ...ssh &&
+	echo ...libcanberra-gtk3-module && 
+	echo -e " \e[1m\e[34m \e[0m " && 
+	sudo-rs apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
+	sudo-rs apt install -y sysvbanner qiv ranger lfm mc locate ncal &&
+	sudo-rs flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
+	
+alias sauber='echo "Die Reingung beginnt" &&
+	sudo-rs apt autoremove && 
+	sudo-rs apt autoclean && 
+	sudo-rs apt install --fix-broken'
+	
+
+alias bashinfo='clear &&
+	echo "Wichtige Bash-Befehle" &&
+	echo "---------------------" &&
+	echo "/usr/bin/xeyes & disown ......................Prozess starten & von Bash lösen" &&
+	echo "nohup /usr/bin/xeyes > xeyes.log 2>&1 & ......Prozess starten & von Bash lösen" &&
+	echo "Programmname & bg ............................Bash nach Programmstart verfügbar" &&
+	echo "(Programmname & fg) ..........................Bash nach Programmstart nicht verfügbar" &&
+	echo "inxi -Fz .....................................System Informationen" &&
+	echo "chmod 777 test.txt ...........................Volle Rechte für alle" &&
+	echo "df -h ........................................Festplatten Status in GB" &&
+	echo "ps ...........................................Laufende Prizesse ermitteln (PID ermitteln)" &&
+	echo "kill -9 PID ..................................Prozess beenden (über PID Nr.)" &&
+	echo "hostname -I ..................................ip Adresse anzeigen" &&
+	echo "ssh://tuxer@192.168.178.35 ...................ssh Verbindung im Dateibrowser" &&
+	echo "ssh tuxer@192.168.178.54 .....................ssh Verbindung im terminal" &&
+	echo "java -jar trackguru.jar ......................Java Programm starten" &&		
+	echo "shutdown -h 20:30 ............................Um 20:30Uhr herunterfahren" &&
+	echo "sudo-rs systemctl status ssh .................Status ssh-Verbindung checken " &&
+	echo "pavucontrol ..................................Sound Probleme beheben " &&
+	echo "sudo-rs swapon /dev/sda999 ...................Swap Partion einschalten " &&
+	echo "find -name *DATEI* ...........................Eine DATEI suchen " &&
+	echo "pactl info ...................................Sound Server anzeigen " &&
+	echo "Whereis ......................................Pfade einer App anzeigen " &&
+echo '
+
+alias soft2='clear &&
+	echo "es werden folgende Softwarepakete zusätzlich installiert:"
+	echo -e "\033[1;34m...kdenlive" && 
+	echo ...qmapshack, gpsprune, viking  && 
+	echo ...remmina&& 
+	echo ...obs-studio && 
+	echo ...audacious, audacity && 
+	echo ...nextcloud-desktop && 
+	echo ...obs-studio && 
+	echo ...audacious && 
+	echo ...audacity && 
+	echo ...gimp, mtpaint && 
+	echo ...pdfarranger, xournal &&
+	echo ...jstest, steam, wine, winetricks &&
+	echo ...virtualbox && 
+	echo ...pavucontrol && 
+	echo ...&& 
+	echo -e " \e[1m\e[34m \e[0m " && 
+	sudo-rs apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
+	sudo-rs apt install -y gpsprune &&
+	sudo-rs apt install -y remmina nextcloud-desktop &&
+	sudo-rs apt install -y gimp mtpaint pdfarranger xournal &&
+	sudo-rs apt install -y jstest-gtk steam-installer wine winetricks &&
+	sudo-rs apt install -y virtualbox virtualbox-guest-additions-iso &&
+	sudo-rs apt install -y pavucontrol &&
+	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
+	echo'
+
+alias paket='dpkg --list' 
+alias source='more /etc/apt/sources.list.d/ubuntu.sources'    # alias source='nano /etc/apt/sources.list'
+alias part='lsblk -e 7'                                       # lsblk -S   Geräte-Namen von sda, sdb, sdc...
