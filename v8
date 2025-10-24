@@ -1,6 +1,6 @@
 #------------------------------------------------------------------------------------
 ## bash-tuxer-addon
-# Version 13 Oktober 2025
+# Version 14 Oktober 2025
 #
 # Farbe		ANSI-Code	Farbe		ANSI-Code
 # Schwarz	\033[0;30m	Dunkelgrau	\033[1;30m
@@ -85,7 +85,7 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...lfm && 
 	echo ...mc && 
 	echo ...locate && 
-	echo ...flatpak && 
+	echo ...flatpak und flathub && 
 	echo ...htop && 
 	echo ...java && 
 	echo ...neowofetch &&
@@ -93,7 +93,8 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...libcanberra-gtk3-module && 
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo-rs apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
-	sudo-rs apt install -y sysvbanner qiv ranger lfm mc locate ncal'
+	sudo-rs apt install -y sysvbanner qiv ranger lfm mc locate ncal &&
+	sudo-rs flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
 	
 alias sauber='echo "Die Reingung beginnt" &&
 	sudo-rs apt autoremove && 
