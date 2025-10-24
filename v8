@@ -122,7 +122,8 @@ alias bashinfo='clear &&
 	echo "sudo-rs systemctl status ssh .................Status ssh-Verbindung checken " &&
 	echo "pavucontrol ..................................Sound Probleme beheben " &&
 	echo "sudo-rs swapon /dev/sda999 ...................Swap Partion einschalten " &&
-	echo "find -name "*DATEI*" .........................Eine DATEI suchen " &&
+	echo "find -name *DATEI* ...........................Eine DATEI suchen " &&
+	echo "pactl info ...................................Sound Server anzeigen " &&
 	echo "Whereis ......................................Pfade einer App anzeigen " &&
 echo '
 
