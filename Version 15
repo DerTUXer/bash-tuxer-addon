@@ -37,7 +37,7 @@ echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  sauber ........... \e[0
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  neu .............. \e[0m "	&& echo "leere Datei anlegen"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashup ........... \e[0m "	&& echo "Bash einmalig erweitern"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  qiv .............. \e[0m "	&& echo "Bildbetrachter"
-echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  ranger lfm mc .... \e[0m "	&& echo "Dateibrowerser"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  ranger lfm mc .... \e[0m "	&& echo "Dateimanager im Terminal"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashinfo ......... \e[0m "	&& echo "Bash Befehle"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  soft2 ............ \e[0m "	&& echo "Zusätzliche Software"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  paket ............ \e[0m "	&& echo "Installierte Pakete anzeigen"
