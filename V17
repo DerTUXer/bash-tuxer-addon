@@ -212,15 +212,15 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...mpd, mpc, ncmpcpp &&
 	echo ...libcanberra-gtk3-module && 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo-rs apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
-	sudo-rs apt install -y sysvbanner qiv ranger lfm mc locate ncal &&
-	sudo-rs apt install -y mpd mpc ncmpcpp &&
-	sudo-rs flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
+	sudo apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
+	sudo apt install -y sysvbanner qiv ranger lfm mc locate ncal &&
+	sudo apt install -y mpd mpc ncmpcpp &&
+	sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
 	
 alias sauber='echo "Die Reingung beginnt" &&
-	sudo-rs apt autoremove && 
-	sudo-rs apt autoclean && 
-	sudo-rs apt install --fix-broken'
+	sudo apt autoremove && 
+	sudo apt autoclean && 
+	sudo apt install --fix-broken'
 	
 
 alias bashinfo='clear &&
@@ -240,9 +240,9 @@ alias bashinfo='clear &&
 	echo "ssh tuxer@192.168.178.54 .....................ssh Verbindung im terminal" &&
 	echo "java -jar trackguru.jar ......................Java Programm starten" &&		
 	echo "shutdown -h 20:30 ............................Um 20:30Uhr herunterfahren" &&
-	echo "sudo-rs systemctl status ssh .................Status ssh-Verbindung checken " &&
+	echo "sudo systemctl status ssh ....................Status ssh-Verbindung checken " &&
 	echo "pavucontrol ..................................Sound Probleme beheben " &&
-	echo "sudo-rs swapon /dev/sda999 ...................Swap Partion einschalten " &&
+	echo "sudo swapon /dev/sda999 ......................Swap Partion einschalten " &&
 	echo "find -name *DATEI* ...........................Eine DATEI suchen " &&
 	echo "pactl info ...................................Sound Server anzeigen " &&
 	echo "Whereis ......................................Pfade einer App anzeigen " &&
@@ -266,13 +266,13 @@ alias soft2='clear &&
 	echo ...pavucontrol && 
 	echo ...&& 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo-rs apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
-	sudo-rs apt install -y gpsprune &&
-	sudo-rs apt install -y remmina nextcloud-desktop &&
-	sudo-rs apt install -y gimp mtpaint pdfarranger xournal &&
-	sudo-rs apt install -y jstest-gtk steam-installer wine winetricks &&
-	sudo-rs apt install -y virtualbox virtualbox-guest-additions-iso &&
-	sudo-rs apt install -y pavucontrol &&
+	sudo apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
+	sudo apt install -y gpsprune &&
+	sudo apt install -y remmina nextcloud-desktop &&
+	sudo apt install -y gimp mtpaint pdfarranger xournal &&
+	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
+	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
+	sudo apt install -y pavucontrol &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
 
@@ -282,7 +282,7 @@ alias part='lsblk -e 7'                                       # lsblk -S   Gerä
 export EDITOR=nano
 
 alias musik='systemctl --user start mpd && ncmpcpp'
-alias pi-update='sudo ~/Dokumente/Ablage/raspi-update-host.sh'
+alias pi-update='sh /Dokumente/Ablage/raspi-update-host.sh'
 
 
 
