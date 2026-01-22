@@ -160,6 +160,7 @@ echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashinfo ......... \e[0
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  soft2 ............ \e[0m "	&& echo "Zusätzliche Software"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  paket ............ \e[0m "	&& echo "Installierte Pakete anzeigen"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  source ........... \e[0m "	&& echo "Source-Liste anzeigen"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  musik ............ \e[0m "	&& echo "Musik im Terminal abspielen"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  pi-update......... \e[0m "	&& echo "Raspi 5 Updaten"
 echo -e "\033[1;34m  ---------------------------------------------------\e[0m "
 echo
@@ -208,10 +209,12 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...java && 
 	echo ...neowofetch &&
 	echo ...ssh &&
+	echo ...mpd, mpc, ncmpcpp &&
 	echo ...libcanberra-gtk3-module && 
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo-rs apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
 	sudo-rs apt install -y sysvbanner qiv ranger lfm mc locate ncal &&
+	sudo-rs apt install -y mpd mpc ncmpcpp &&
 	sudo-rs flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
 	
 alias sauber='echo "Die Reingung beginnt" &&
