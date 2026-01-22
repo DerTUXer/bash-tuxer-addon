@@ -282,7 +282,7 @@ alias part='lsblk -e 7'                                       # lsblk -S   Gerä
 export EDITOR=nano
 
 alias musik='systemctl --user start mpd && ncmpcpp'
-alias pi-update='sudo $HOME/Dokumente/Ablage/raspi-update-host.sh'
+alias pi-update='sudo sh $HOME/Dokumente/Ablage/raspi-update-host.sh'
 
 
 
