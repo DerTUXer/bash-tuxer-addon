@@ -118,7 +118,7 @@ fi
 
 #------------------------------------------------------------------------------------
 ## bash-tuxer-addon
-# Version 17 Januar 2026
+# Version 18 Januar 2026
 #
 # Farbe		ANSI-Code	Farbe		ANSI-Code
 # Schwarz	\033[0;30m	Dunkelgrau	\033[1;30m
@@ -132,7 +132,7 @@ fi
 # ------------------------------------------------------------------------------------
 
 clear
-echo -e "\033[1;34m    bash-tuxer-addon v13 \e[0m "
+echo -e "\033[1;34m    bash-tuxer-addon v18 \e[0m "
 echo " -------------------------"
 echo -n "Homepage:  " && echo -e "\033[1;35m https://mtb-tour-map.jimdosite.com/ \e[0m "
 echo -n "You Tube:  " && echo -e "\033[1;35m https://www.youtube.com/@dertuxer4034 \e[0m "
@@ -264,7 +264,7 @@ alias soft2='clear &&
 	echo ...jstest, steam, wine, winetricks &&
 	echo ...virtualbox && 
 	echo ...pavucontrol && 
-	echo ...&& 
+	echo ...alacritty && 
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
 	sudo apt install -y gpsprune &&
@@ -272,7 +272,7 @@ alias soft2='clear &&
 	sudo apt install -y gimp mtpaint pdfarranger xournal &&
 	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
 	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
-	sudo apt install -y pavucontrol &&
+	sudo apt install -y pavucontrol && alacritty && alacritty migrate &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
 
@@ -283,7 +283,7 @@ export EDITOR=nano
 
 alias musik='systemctl --user start mpd && ncmpcpp'
 alias pi-update='sudo sh $HOME/Dokumente/Ablage/raspi-update-host.sh'
-
+alacritty migrate^C
 
 
 
