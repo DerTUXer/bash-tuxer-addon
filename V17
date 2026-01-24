@@ -246,6 +246,8 @@ alias bashinfo='clear &&
 	echo "find -name *DATEI* ...........................Eine DATEI suchen " &&
 	echo "pactl info ...................................Sound Server anzeigen " &&
 	echo "Whereis ......................................Pfade einer App anzeigen " &&
+	echo "alacritty migrate ............................Fehlermeldung von alacritty beheben " &&
+
 echo '
 
 alias soft2='clear &&
@@ -272,7 +274,7 @@ alias soft2='clear &&
 	sudo apt install -y gimp mtpaint pdfarranger xournal &&
 	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
 	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
-	sudo apt install -y pavucontrol && alacritty && alacritty migrate &&
+	sudo apt install -y pavucontrol alacritty &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
 
