@@ -198,7 +198,7 @@ alias neu='touch neue_Textdatei.txt'
 
 alias bashup='clear && echo Folgende Helferlein werden nun installiert && 
 	echo -e "\033[1;34m...banner" && 
-	echo ...qiv && 
+	echo ...qiv und nala && 
 	echo ...ranger && 
 	echo ...inxi && 
 	echo ...lfm && 
@@ -214,7 +214,7 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
 	sudo apt install -y sysvbanner qiv ranger lfm mc locate ncal &&
-	sudo apt install -y mpd mpc ncmpcpp &&
+	sudo apt install -y mpd mpc ncmpcpp nala &&
 	sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
 	
 alias sauber='echo "Die Reingung beginnt" &&
