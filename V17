@@ -118,7 +118,7 @@ fi
 
 #------------------------------------------------------------------------------------
 ## bash-tuxer-addon
-# Version 18 Januar 2026
+# Version 28 Januar 2026
 #
 # Farbe		ANSI-Code	Farbe		ANSI-Code
 # Schwarz	\033[0;30m	Dunkelgrau	\033[1;30m
@@ -132,7 +132,7 @@ fi
 # ------------------------------------------------------------------------------------
 
 clear
-echo -e "\033[1;34m    bash-tuxer-addon v18 \e[0m "
+echo -e "\033[1;34m    bash-tuxer-addon v28 \e[0m "
 echo " -------------------------"
 echo -n "Homepage:  " && echo -e "\033[1;35m https://mtb-tour-map.jimdosite.com/ \e[0m "
 echo -n "You Tube:  " && echo -e "\033[1;35m https://www.youtube.com/@dertuxer4034 \e[0m "
@@ -157,6 +157,7 @@ echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashup ........... \e[0
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  qiv .............. \e[0m "	&& echo "Bildbetrachter"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  ranger lfm mc .... \e[0m "	&& echo "Dateimanager im Terminal"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  bashinfo ......... \e[0m "	&& echo "Bash Befehle"
+echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  inxi-info ........ \e[0m "	&& echo "Liste der inxi Parameter"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  soft2 ............ \e[0m "	&& echo "Zusätzliche Software"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  paket ............ \e[0m "	&& echo "Installierte Pakete anzeigen"
 echo -en "\033[1;34m  |\e[0m " && 	echo -en "\033[1;33m  source ........... \e[0m "	&& echo "Source-Liste anzeigen"
@@ -248,7 +249,28 @@ alias bashinfo='clear &&
 	echo "Whereis ......................................Pfade einer App anzeigen " &&
 	echo "alacritty migrate ............................Fehlermeldung von alacritty beheben " &&
 
-echo '
+echo ' 
+
+alias inxi-info='clear &&
+	echo "Wichtige inxi Parameter" &&
+	echo "-----------------------" &&
+	echo "inxi -A			Audio:" &&
+	echo "inxi -B			Batterie:" &&
+	echo "inxi -C			CPU:" &&
+	echo "inxi -D			Festplatten:" &&
+	echo "inxi -E			Bluethooth:" &&
+	echo "inxi -F			Komplette Ausgabe" &&
+	echo "inxi -G			Grafik:" &&
+	echo "inxi -I			Info & Memory:" &&
+	echo "inxi -J			Swap:" &&
+	echo "inxi -L			Logical:" &&
+	echo "inxi -M			Maschine:" &&
+	echo "inxi -N			Netzwerk:" &&
+	echo "inxi -P			Partitionen:" &&
+	echo "inxi -R			Raid-System:" &&
+	echo "inxi -S			System:" &&
+
+echo ' 
 
 alias soft2='clear &&
 	echo "es werden folgende Softwarepakete zusätzlich installiert:"
