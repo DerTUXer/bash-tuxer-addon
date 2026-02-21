@@ -119,7 +119,7 @@ fi
 
 #------------------------------------------------------------------------------------
 ## bash-tuxer-addon
-# Version 28 Januar 2026
+# Version 20.02.2026
 #
 # Farbe		ANSI-Code	Farbe		ANSI-Code
 # Schwarz	\033[0;30m	Dunkelgrau	\033[1;30m
@@ -145,7 +145,7 @@ echo
 echo -n "KW        " && date +%U
 echo -n "Uhrzeit:  " && date +%R
 echo
-ncal
+#ncal
 
 # TUXer`s Hotkeys
 echo -e "\033[1;34m  ----------------------ALIAS------------------------\e[0m "
@@ -188,7 +188,7 @@ alias up='clear &&
 	echo -en "\033[1;34mUpdate und Upgrade\e[0m "&& 
 	echo "durchführen zu können." &&
 	 
-	sudo apt update && sudo apt upgrade &&
+	sudo nala update && sudo nala upgrade &&
 	echo -e "\e[1m\e[33mAPT Aktualisierung ist FERTIG\e[0m" &&  echo && 
 	
 	sudo flatpak update && 
@@ -203,11 +203,12 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo -e "\033[1;34m...banner" && 
 	echo ...qiv und nala && 
 	echo ...ranger && 
+	echo ...neomutt &&
 	echo ...inxi && 
 	echo ...lfm && 
 	echo ...mc && 
 	echo ...locate && 
-        echo ...figlet &&
+        echo ...figlet, sl und banner &&
 	echo ...flatpak und flathub && 
 	echo ...htop && 
 	echo ...java && 
@@ -217,8 +218,8 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...libcanberra-gtk3-module && 
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
-	sudo apt install -y sysvbanner qiv ranger lfm mc locate ncal &&
-	sudo apt install -y mpd mpc ncmpcpp nala figlet &&
+	sudo apt install -y sysvbanner qiv ranger lfm mc locate ncal sl &&
+	sudo apt install -y mpd mpc ncmpcpp nala figlet neomutt &&
 	sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
 	
 alias sauber='echo "Die Reingung beginnt" &&
@@ -279,7 +280,7 @@ alias soft2='clear &&
 	echo "es werden folgende Softwarepakete zusätzlich installiert:"
 	echo -e "\033[1;34m...kdenlive" && 
 	echo ...qmapshack, gpsprune, viking  && 
-	echo ...remmina&& 
+	echo ...remmina und guvcview && 
 	echo ...obs-studio && 
 	echo ...audacious, audacity && 
 	echo ...nextcloud-desktop && 
@@ -293,13 +294,13 @@ alias soft2='clear &&
 	echo ...pavucontrol && 
 	echo ...alacritty && 
 	echo -e " \e[1m\e[34m \e[0m " && 
-	sudo apt install -y kdenlive qmapshack viking obs-studio audacious audacity &&
-	sudo apt install -y gpsprune &&
-	sudo apt install -y remmina nextcloud-desktop &&
-	sudo apt install -y gimp mtpaint pdfarranger xournal &&
-	sudo apt install -y jstest-gtk steam-installer wine winetricks &&
-	sudo apt install -y virtualbox virtualbox-guest-additions-iso &&
-	sudo apt install -y pavucontrol alacritty &&
+	sudo nala install -y kdenlive qmapshack viking obs-studio audacious audacity &&
+	sudo nala install -y gpsprune &&
+	sudo nala install -y remmina nextcloud-desktop &&
+	sudo nala install -y gimp mtpaint pdfarranger xournal &&
+	sudo nala install -y jstest-gtk steam-installer wine winetricks &&
+	sudo nala install -y virtualbox virtualbox-guest-additions-iso &&
+	sudo nala install -y pavucontrol alacritty guvcview &&
 	echo -e "\e[1m\e[33mAPT zusätzliche Software-Installation ist FERTIG\e[0m" &&
 	echo'
 
@@ -311,6 +312,21 @@ export EDITOR=nano
 alias musik='systemctl --user start mpd && ncmpcpp'
 alias pi-update='sudo sh $HOME/Dokumente/01_Ablage/raspi-update-host.sh'
 alias out='pkill -u $USER'
+
+# apt durch nala ersetzen (inkl. sudo-Unterstützung)
+# apt() { 
+#  command nala "$@" 
+# }
+# sudo() {
+#   if [ "$1" = "apt" ]; then
+#    shift
+#    command sudo nala "$@"
+#  else
+#     command sudo "$@"
+#   fi
+# }
+
+
 # REM Letzte Änderung alacritty migrate.
 
 # REM Puffer für PipeWire erhöhen, um Aussetzer bei der Audio-Aufnahme zu vermeiden
