@@ -1,4 +1,4 @@
-### bash-tuxer-addon - Eine Bash Erweiterung (DE) ###
+### bash-tuxer-addon - Eine Bash Erweiterung (DE) ##
 
 Dieser kleine  code ist dafür gedacht um am Ende in der Datei ".bashrc"
 angehangen zu werden.
