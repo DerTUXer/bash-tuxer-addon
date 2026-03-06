@@ -208,9 +208,9 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo ...lfm && 
 	echo ...mc && 
 	echo ...locate && 
-        echo ...figlet, sl und banner &&
+    echo ...figlet, sl und banner &&
 	echo ...flatpak und flathub && 
-	echo ...htop && 
+	echo ...htop, git, cmake && 
 	echo ...java && 
 	echo ...neowofetch &&
 	echo ...ssh &&
@@ -219,7 +219,7 @@ alias bashup='clear && echo Folgende Helferlein werden nun installiert &&
 	echo -e " \e[1m\e[34m \e[0m " && 
 	sudo apt install -y flatpak htop default-jre neowofetch inxi libcanberra-gtk3-module ssh &&
 	sudo apt install -y sysvbanner qiv ranger lfm mc locate ncal sl &&
-	sudo apt install -y mpd mpc ncmpcpp nala figlet neomutt &&
+	sudo apt install -y mpd mpc ncmpcpp nala figlet neomutt git cmake && 
 	sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo'
 	
 alias sauber='echo "Die Reingung beginnt" &&
