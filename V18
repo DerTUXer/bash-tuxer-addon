@@ -119,7 +119,7 @@ fi
 
 #------------------------------------------------------------------------------------
 ## bash-tuxer-addon
-# Version 20.02.2026
+# Version 06.03.2026
 #
 # Farbe		ANSI-Code	Farbe		ANSI-Code
 # Schwarz	\033[0;30m	Dunkelgrau	\033[1;30m
